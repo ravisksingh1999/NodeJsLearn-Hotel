@@ -1,2 +1,18 @@
 # NodeJsLearn-Hotel
-Complete NodeJs with Real-time example of Hotel with people chef, waiter, manager and serving menuItems on basis of taste sour, sweet, spicy
+
+A complete Node.js backend project for a hotel management system.
+
+## Features
+- User roles (chef, waiter, manager)
+- Menu management
+- MongoDB integration
+
+## Tech Stack
+- Node.js
+- Express.js
+- MongoDB
+
+## How to Run
+```bash
+npm install
+nodemon server.js
