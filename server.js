@@ -7,18 +7,18 @@ require('dotenv').config();
 const bodyParser = require('body-parser');
 app.use(bodyParser.json());//req.body ke andar body parser client ke dware send data ko save kar le raha hai
 
-app.get('/', (req, res) => {
-  res.send('Welcome to our Hotel');
-})
 //Import the router files
 const personRoutes = require('./routes/personRoutes.js')
 const menuItemRoutes = require('./routes/menuItemRoutes.js');
 
 //Use the routers
-app.use('/person', personRoutes);
-app.use('/menu', menuItemRoutes);
+app.use('/api/person', personRoutes);
+app.use('/api/menu', menuItemRoutes);
 
 
+app.get('/', (req, res) => {
+  res.send('Welcome to our Hotel');
+})
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log(`Server is running on port ` + `${PORT}`); 
